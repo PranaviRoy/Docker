@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapi-deployment
+  labels:
+    name: webapi-deployment
+    app: webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: webapi-pod
+      app: webapi
+  template:
+    metadata:
+      name: webapi-pod
+      labels:
+        name: webapi-pod
+        app: webapi
+    spec:
+      containers:
+        - name: webapi
+          image: pranvyr/rest-app
+          ports:
+            - containerPort: 8080

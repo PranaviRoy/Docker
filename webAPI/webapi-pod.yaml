@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapi-pod
+  labels:
+    name: webapi-pod
+    app: webapi
+spec:
+  containers:
+    - name: webapi
+      image: pranvyr/rest-app
+      ports:
+        - containerPort: 8080
