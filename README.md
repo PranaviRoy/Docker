@@ -1,2 +1,2 @@
 # Docker
-Docker 101
+Docker and Kubernetes 101
